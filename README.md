@@ -2,6 +2,10 @@
 ##Android体系与系统架构
 ##Android开发工具新接触
 ###Android studio
+ 1.IDE配置
+ 2.高级使用技巧
+ 3.ADB命令
+ 4.Genymotion
 ##Android控件结构与自定义控件详解
 ##ListView使用技巧
 ##Android Scroll分析
