@@ -12,6 +12,22 @@
 ##ListView使用技巧
   - Android控件架构
     - 每个Activity都有一个window对象，通常是由PhoneWindow类来实现的。PhoneWindow将DecorView作为整个应用窗口的跟View，DecorView将屏幕分成两部分：TitleView和ContentView.
+  - Viwe的测量：MeasureSpec和测量模式
+    - MeasureSpec是一个32位的int值,其中高2位位测量的模式，低30位位测量的大小(使用位运算为了提高效率)
+       - 测量模式有三种：
+        - EXACTLY：精确值模式，属性设置为精确数值或者match_parent时，系统使用的是EXACTLY模式
+        - AT_MOST：最大值模式，属性设置为wrap_content时，系统使用的是AT_MOST模式
+        - UNSPECTFIED:不指定大小测量模式，通常情况下在绘制自定义View时才会用到
+    -View类模式的是onMeasure()方法只支持EXACTLY模式，所以如果在自定义View的时候不重写onMeasure方法的话，就只能使用EXACTLY模式。自定义View可以响应你指定的具体的宽高值或者是match_parent属性，但是，如果要让自定义View支持wrap_content属性的话，那么就必须要重写onMeasure方法来指定wrap_content时view的大小。
+ - View和ViewGroup的绘制
+ - 自定义View(ViewGroup)
+      - 对现有控件进行扩展
+      - 通过组合来实现新的控件
+      - 重写View来实现全新的控件
+ - 事件拦截机制分析
+      - dispatchTouchEvent
+      - onInterceptTouchEvent
+      - onTouchEvent
 
 ##Android Scroll分析
 ##Android绘图机制与处理技巧
