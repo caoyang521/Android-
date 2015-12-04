@@ -6,12 +6,19 @@
   - 2.高级使用技巧
   - 3.ADB命令
   - 4.Genymotion
+  
 ##Android控件结构与自定义控件详解
+
 ##ListView使用技巧
+  - Android控件架构
+    - 每个Activity都有一个window对象，通常是由PhoneWindow类来实现的。PhoneWindow将DecorView作为整个应用窗口的跟View，DecorView将屏幕分成两部分：TitleView和ContentView.
+
 ##Android Scroll分析
 ##Android绘图机制与处理技巧
 ##Android动画机制与使用技巧
+
 ##Activity与Activity调用栈分析
+
  - Activity是与用户交互的第一接口，它提供了一个用户完成指令的窗口。当开发者创建Activity之后，通过调用setContentView(View)方法来给该Activity指定一个显示的界面，并以此为基础提供给用户交互的接口。系统采用Activity栈的方式来管理Activity。
  - 生命周期
  - 启动与销毁过程
